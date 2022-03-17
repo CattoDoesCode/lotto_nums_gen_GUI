@@ -40,8 +40,6 @@ public class LottoNumsGen_GUI extends JFrame{
         list_generated.setModel(listGeneratedModel);
         DefaultListCellRenderer renderer = (DefaultListCellRenderer) list_generated.getCellRenderer();
         renderer.setHorizontalAlignment(SwingConstants.CENTER);
-        DefaultListCellRenderer renderer2 = (DefaultListCellRenderer) list_generated.getCellRenderer();
-        renderer2.setVerticalAlignment(SwingConstants.CENTER);
 
         label_warning.setVisible(false);
 
