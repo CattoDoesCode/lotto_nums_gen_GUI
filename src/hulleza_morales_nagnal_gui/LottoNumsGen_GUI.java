@@ -25,6 +25,8 @@ public class LottoNumsGen_GUI extends JFrame{
     private JLabel label_limit;
     private JLabel label_range;
     private JLabel label_num;
+
+    // List Models for Jlist
     private final DefaultListModel<String> listHistoryModel;
     private final DefaultListModel<String> listGeneratedModel;
 
@@ -69,6 +71,7 @@ public class LottoNumsGen_GUI extends JFrame{
                     }
                 }
                 else {
+                    // convert string input to int
                     int limit = Integer.parseInt(str_limit);
                     int range = Integer.parseInt(str_range);
                     int num = Integer.parseInt(str_num);
@@ -98,6 +101,7 @@ public class LottoNumsGen_GUI extends JFrame{
                 historyPanel.setVisible(button_showHistory.isSelected());
             }
         });
+
         button_clear.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -116,7 +120,6 @@ public class LottoNumsGen_GUI extends JFrame{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-
     }
 
 }
