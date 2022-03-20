@@ -53,7 +53,14 @@ public class LottoNumsGen_GUI extends JFrame{
                 String str_num = textField_num.getText();
 
                 // input error catcher
-                if (str_limit.isEmpty() || str_range.isEmpty() || str_num.isEmpty()) {
+                if (str_limit.isEmpty() && str_range.isEmpty() && str_num.isEmpty()) {
+                    label_warning.setVisible(true);
+                    label_warning.setText("please fill in required fields!");
+                    label_limit.setForeground(Color.decode("#E0564C"));
+                    label_range.setForeground(Color.decode("#E0564C"));
+                    label_num.setForeground(Color.decode("#E0564C"));
+                }
+                else if (str_limit.isEmpty() || str_range.isEmpty() || str_num.isEmpty()) {
                     if (str_limit.isEmpty()) {
                         label_warning.setVisible(true);
                         label_warning.setText("please fill in required fields!");
